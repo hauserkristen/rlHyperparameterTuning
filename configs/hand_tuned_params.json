@@ -1,0 +1,100 @@
+{
+    "num_iters": 1000000,
+    "logging_path": "debug",
+    "alg_params": {
+        "PPO": {
+            "CustomCartPole-v0": {
+                "gamma": 0.99,
+                "learning_rate": 1e-4,
+                "gae_lambda": 0.95,
+                "ent_coef": 0.01,
+                "vf_coef": 0.8,
+                "clip_range": 0.1,
+                "clip_range_vf": 0.1
+            },
+            "CustomLunarLander-v0": {
+                "gamma": 0.3,
+                "learning_rate": 0.0001,
+                "gae_lambda": 0.6,
+                "ent_coef": 0.005,
+                "vf_coef": 0.25,
+                "clip_range": 0.2,
+                "clip_range_vf": 0.15
+            },
+            "CustomReacher-v0": {
+                "gamma": 0.4,
+                "learning_rate": 0.00075,
+                "gae_lambda": 0.9,
+                "ent_coef": 0.005,
+                "vf_coef": 0.5,
+                "clip_range": 0.25,
+                "clip_range_vf": 0.1
+            }
+        },
+        "A2C":{
+            "CustomCartPole-v0": {
+                "gamma": 0.3,
+                "learning_rate": 0.001,
+                "gae_lambda": 0.8,
+                "ent_coef": 0.001,
+                "vf_coef": 0.4
+            },
+            "CustomLunarLander-v0": {
+                "gamma": 0.8,
+                "learning_rate": 0.0005,
+                "gae_lambda": 0.1,
+                "ent_coef": 0.005,
+                "vf_coef": 0.4
+            },
+            "CustomReacher-v0": {
+                "gamma": 0.3,
+                "learning_rate": 0.001,
+                "gae_lambda": 0.1,
+                "ent_coef": 0.01,
+                "vf_coef": 0.4
+            }
+        },
+        "SAC":{
+            "CustomReacher-v0": {
+                "gamma": 0.0,
+                "learning_rate": 0.0,
+                "ent_coef": 0.0,
+                "tau": 0.0
+            }
+        },
+        "DQN":{
+            "CustomCartPole-v0": {
+                "gamma": 0.95,
+                "learning_rate": 0.001,
+                "exploration_fraction": 0.995,
+                "exploration_initial_eps": 1.0,
+                "exploration_final_eps": 0.01
+            },
+            "CustomLunarLander-v0": {
+                "gamma": 0.99,
+                "learning_rate": 5e-4,
+                "exploration_fraction": 0.995,
+                "exploration_initial_eps": 1.0,
+                "exploration_final_eps": 0.01
+            }
+        }
+    },
+    "env_params": {
+        "CustomCartPole-v0":{
+            "num_steps": 64,
+            "batch_size": 16,
+            "n_epochs": 2
+        },
+        "CustomLunarLander-v0": {
+            "num_steps": 256,
+            "batch_size": 64,
+            "n_epochs": 10
+        },
+        "CustomReacher-v0": {
+            "num_steps": 256,
+            "batch_size": 64,
+            "n_epochs": 10
+        }
+    }
+
+}

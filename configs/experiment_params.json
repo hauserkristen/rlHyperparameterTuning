@@ -1,0 +1,78 @@
+{
+    "num_iters": 100000000,
+    "logging_path": "results",
+    "tuning_strategy_params": {
+        "SEHOP": {
+            "CustomCartPole-v0": {
+                "exp_iter": 15,
+                "mem_size": 30,
+                "bounding_prob": 0.15
+            },
+            "CustomLunarLander-v0": {
+                "exp_iter": 30,
+                "mem_size": 60,
+                "bounding_prob": 0.05
+            },
+            "CustomReacher-v0": {
+                "exp_iter": 30,
+                "mem_size": 60,
+                "bounding_prob": 0.05
+            }
+        },
+        "HOOF":{
+            "max_kl": 0.03,
+            "ope_traj_len": 16
+        },
+        "PBT":{
+            "CustomCartPole-v0": {
+                "exp_num_configs": 10,
+                "num_configs": 5,
+                "exp_iter": 10
+            },
+            "CustomLunarLander-v0": {
+                "exp_num_configs": 15,
+                "num_configs": 7,
+                "exp_iter": 10
+            },
+            "CustomReacher-v0": {
+                "exp_num_configs": 20,
+                "num_configs": 10,
+                "exp_iter": 6
+            }
+        },
+        "RANDOM":{
+        }
+    },
+    "env_params": {
+        "CustomCartPole-v0":{
+            "num_configs": 10,
+            "num_steps": 64,
+            "batch_size": 16,
+            "reward_bounds": [7, 200],
+            "n_epochs": 2
+        },
+        "CustomLunarLander-v0": {
+            "num_configs": 15,
+            "num_steps": 256,
+            "batch_size": 64,
+            "reward_bounds": [-400, 100],
+            "n_epochs": 5,
+            "buffer_size": 20000
+        },
+        "CustomReacher-v0": {
+            "num_configs": 20,
+            "num_steps": 256,
+            "batch_size": 64,
+            "reward_bounds": [-250, 30],
+            "n_epochs": 10
+        },
+        "CustomHopper-v0": {
+            "num_configs": 20,
+            "num_steps": 256,
+            "batch_size": 64,
+            "reward_bounds": [0, 3000],
+            "n_epochs": 10
+        }
+    }
+
+}
