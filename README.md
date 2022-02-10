@@ -9,7 +9,7 @@ Additionally, it uses openbaselines3 which utilizes Pytorch for the learning alg
 * Deep Q-Network (DQN)
 * Advantage Actor Critic (A2C)
 * Proximal Policy Optimization (PPO)
-* Soft Afector Critic (SAC)
+* Soft Actor Critic (SAC)
 Other algorithms exist within the openbaselines3 implemenentations and could be integrated by adjusting the tuning base class.
 
 Additionally, environments are slightly modified to exclude any shaping functions during evaluation trajectories. To install these environments navigate to the ht_envs directory and run the command: `pip install -e .`
